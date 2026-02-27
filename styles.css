@@ -1,0 +1,270 @@
+/* ---------------------------------------------------
+   INDEX
+   01. Variables
+   02. Reset / Base
+   03. Layout global
+   04. Header and Navigation
+   05. Footer
+   06. Home Style
+   07. About Styles
+   08. Books Styles
+   09. Contact Styles
+   10. Player Styles
+-----------------------------------------------------*/
+
+/* -----------------------------------------------
+   01. Variables
+----------------------------------------------- */
+
+:root {
+  --decorative-base: #fff;
+  --color-primary: #ffd60a;
+  --color-secondary: #000814;
+  --font-main: "Montserrat", sans-serif;
+  --max-width: 2400px;
+  --content-witdh: 1920px;
+  --panel-gap: 8px;
+  --background-elevated-base: #1f1f1f;
+}
+
+html {
+  background-color: #121212;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.header-container {
+  height: calc(48px);
+  /* grid-area: global-nav; */
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: relative;
+  padding: calc(var(--panel-gap));
+  margin: calc(var(--panel-gap) * -1);
+  background-color: #000;
+}
+
+/* -----------------------------------------------
+   SVG Helpers
+----------------------------------------------- */
+/* Aplica color blanco a SVGs inline y a sus trazos */
+svg,
+svg * {
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+
+/* Clase utilitaria para iconos SVG (inline) */
+.icon-white {
+  fill: #fff !important;
+  stroke: #fff !important;
+  color: #fff !important;
+}
+
+#home {
+  padding: 12px;
+  background-color: rgb(42, 42, 42);
+  border-radius: 50px;
+  border: 0;
+}
+
+.header-column-2 {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container a {
+  border-radius: var(--encore-button-corner-radius, 9999px);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #656565;
+}
+
+.header-container a:hover {
+  color: white;
+}
+
+.header-container input {
+  border-radius: 500px;
+  background-color: var(--background-elevated-base);
+  padding: 12px 96px 12px 48px;
+  border: 0;
+  position: relative;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.lupa-icon {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  z-index: 99;
+}
+
+.separator {
+  background: #fff;
+  width: 1px;
+  height: 25px;
+  margin: 16px;
+}
+
+.primary-button {
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  display: inline-block;
+  position: relative;
+  padding: 8px 32px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 420px 1fr; /* Sidebar fija, contenido flexible */
+  gap: 20px; /* Espacio entre columnas */
+  min-height: 100vh;
+  margin-top: 30px;
+}
+
+aside {
+  background-color: #000;
+  border-radius: 8px;
+  flex-direction: column;
+  display: flex;
+  padding: 8px;
+}
+
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0px;
+}
+
+aside ul li {
+  color: #b3b3b3;
+}
+
+.side-bar-header {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* evita que los hijos se estiren verticalmente */
+}
+
+.side-bar-header span {
+  color: white;
+  margin-top: 0; /* quitar margen excesivo que expandía el contenedor */
+}
+
+.side-bar-body {
+  display: flex;
+}
+
+.aside-section {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 8px 0px;
+  background-color: rgb(31, 31, 31);
+  border-radius: 8px;
+  padding: 16px 20px;
+  gap: 10px;
+}
+
+.aside-section span {
+  font-size: 16px;
+}
+
+.language-btn-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.language-btn {
+  border: 1px white solid;
+  background-color: transparent;
+  color: white;
+  padding: 4px 16px;
+  border-radius: 9999px;
+}
+
+.songs-container {
+  display: flex;
+  gap: 16px;
+}
+
+.song-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  color: white;
+}
+
+.artist-container {
+  display: flex;
+  gap: 16px;
+}
+
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.artist-card img {
+  border-radius: 999px;
+}
+
+.side-bar-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-bar-body-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 0 0 50%;
+  margin-bottom: 100%;
+}
+
+.create-button {
+  background-color: rgb(179, 179, 179);
+  display: flex;
+  padding: 10px;
+}
+
+footer {
+  background-image: linear-gradient(90deg, #af2896, #509bf5);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  z-index: 1;
+}
