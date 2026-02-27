@@ -315,9 +315,28 @@ aside ul li {
   flex-direction: column;
 }
 
-/* -----------------------
-   Song card
------------------------- */
+.song-card a {
+  position: relative;
+}
+
+.play-button {  
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  bottom: 8px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  height: 32px;
+  width: 32px;
+  background-color: #1ed760;
+}
+
+.song-card a:hover .play-button {
+  opacity: 1;
+}
+
 .main-content {
   color: white;
 }
@@ -395,3 +414,14 @@ footer {
 footer p {
   font-weight: 700;
 }
+
+
+.play-button {  
+  opacity: 0;
+  /* resto de propiedades */ 
+}
+
+.song-card a:hover .play-button {
+  opacity: 1;
+}
+  
