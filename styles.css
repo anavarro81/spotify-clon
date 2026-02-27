@@ -376,14 +376,22 @@ aside ul li {
 ------------------------ */
 footer {
   background-image: linear-gradient(90deg, #af2896, #509bf5);
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
   width: 100%;
   z-index: 1;
+  color: white;
+  border-radius: 8px;
+  padding-block: 11px 7px;
+  padding-inline: 15px 24px;
 }
 
 /* -----------------------
    Footer
 ------------------------ */
+footer p {
+  font-weight: 700;
+}
